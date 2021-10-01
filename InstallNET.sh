@@ -622,7 +622,7 @@ d-i mirror/http/proxy string
 
 d-i passwd/root-login boolean ture
 d-i passwd/make-user boolean false
-d-i passwd/root-password-crypted password $myPASSWORD
+#d-i passwd/root-password-crypted password $myPASSWORD
 d-i user-setup/allow-password-weak boolean true
 d-i user-setup/encrypt-home boolean false
 
@@ -642,17 +642,17 @@ cp -f '/net.bat' './net.bat'; \
 umount /media || true; \
 
 d-i partman-partitioning/confirm_write_new_label boolean true
-d-i partman/mount_style select uuid
-d-i partman/choose_partition select finish
-d-i partman-auto/method string regular
-d-i partman-auto/init_automatically_partition select Guided - use entire disk
-d-i partman-auto/choose_recipe select All files in one partition (recommended for new users)
-d-i partman-md/device_remove_md boolean true
-d-i partman-lvm/device_remove_lvm boolean true
-d-i partman-lvm/confirm boolean true
-d-i partman-lvm/confirm_nooverwrite boolean true
-d-i partman/confirm boolean true
-d-i partman/confirm_nooverwrite boolean true
+#d-i partman/mount_style select uuid
+#d-i partman/choose_partition select finish
+#d-i partman-auto/method string regular
+#d-i partman-auto/init_automatically_partition select Guided - use entire disk
+#d-i partman-auto/choose_recipe select All files in one partition (recommended for new users)
+#d-i partman-md/device_remove_md boolean true
+#d-i partman-lvm/device_remove_lvm boolean true
+#d-i partman-lvm/confirm boolean true
+#d-i partman-lvm/confirm_nooverwrite boolean true
+#d-i partman/confirm boolean true
+#d-i partman/confirm_nooverwrite boolean true
 
 d-i debian-installer/allow_unauthenticated boolean true
 
